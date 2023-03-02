@@ -1,4 +1,4 @@
-int	ft_isalpha(int c)
+int	ft_isalpha(int	c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (2);
@@ -12,8 +12,8 @@ int	ft_isalpha(int c)
 // #include <ctype.h>
 // int	main(void)
 // {
-// 	char	upp_c = 'G';
-// 	char	low_c = 'g';
+// 	char	upp_c = 'Z';
+// 	char	low_c = 'a';
 // 	char	num = '9';
 
 // 	printf("isalpha: %c ft_isalpha: %c\n", isalpha(upp_c) + '0', ft_isalpha(upp_c) + '0');
