@@ -20,7 +20,7 @@ void	ft_bzero(void* s, size_t n)
 
 // 	memset(&s1, 0, 5);
 // 	ft_bzero(&s2, 5);
-// 	printf("bzero: %s ft_bzero: %s\n", s1, s2);
+// 	printf("memset/bzero: %s ft_bzero: %s\n", s1, s2);
 
 // 	return (0);
 // }
