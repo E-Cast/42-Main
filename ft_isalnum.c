@@ -12,7 +12,7 @@ int	ft_isalnum(int	c)
 // {
 
 // 	for (int i = 0; i <= 127; i++)
-// 		printf("%c %d isalnum: %d ft_isalnum: %d\n", i, i, ft_isalnum(i), ft_isalnum(i));
+// 		printf("%c, %d, isalnum: %d, ft_isalnum: %d\n", i, i, ft_isalnum(i), ft_isalnum(i));
 
 // 	return (0);
 // }

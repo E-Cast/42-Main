@@ -11,7 +11,7 @@ int	ft_isprint(int	c)
 // int	main(void)
 // {
 // 	for (int i = 0; i <= 127; i++)
-// 		printf("%c %d isprint: %d ft_isprint: %d\n", i, i, isprint(i), ft_isprint(i));
+// 		printf("%c, %d, isprint: %d, ft_isprint: %d\n", i, i, isprint(i), ft_isprint(i));
 
 // 	return (0);
 // }

@@ -30,5 +30,5 @@ void*	ft_memcpy(void* dest, const void* src, size_t n)
 // 	dest2[7] = '\0';
 // 	memcpy(dest1, src, 7);
 // 	ft_memcpy(dest2, src, 7);
-// 	printf("original: %s memcpy: %s ft_memcpy: %s", src, dest1, dest2);
+// 	printf("original: %s, memcpy: %s, ft_memcpy: %s", src, dest1, dest2);
 // }

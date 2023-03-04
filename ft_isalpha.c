@@ -12,7 +12,7 @@ int	ft_isalpha(int	c)
 // {
 
 // 	for (int i = 0; i <= 127; i++)
-// 		printf("%c %d isalpha: %d ft_isalpha: %d\n", i, i, ft_isalpha(i), ft_isalpha(i));
+// 		printf("%c, %d, isalpha: %d, ft_isalpha: %d\n", i, i, ft_isalpha(i), ft_isalpha(i));
 
 // 	return (0);
 // }
