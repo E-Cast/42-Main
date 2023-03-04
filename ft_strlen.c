@@ -14,5 +14,5 @@ size_t	ft_strlen(char* str)
 // int	main(void)
 // {
 // 	char*	str = "String length";
-// 	printf("%s strlen: %d ft_strlen: %d\n", str, strlen(str), ft_strlen(str));
+// 	printf("%s strlen: %lld ft_strlen: %lld\n", str, strlen(str), ft_strlen(str));
 // }
