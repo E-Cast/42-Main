@@ -1,5 +1,5 @@
 #include <stddef.h>
-void	ft_memset(void* s, int ch , size_t n)
+void	ft_memset(void *s, int ch , size_t n)
 {
 	unsigned	char *str;
 	size_t	i;
