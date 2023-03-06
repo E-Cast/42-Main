@@ -1,5 +1,6 @@
 #include <stddef.h>
-size_t	ft_strlen(char* str)
+
+size_t	ft_strlen(char *str)
 {
 	size_t	len;
 
@@ -13,6 +14,7 @@ size_t	ft_strlen(char* str)
 // #include <string.h>
 // int	main(void)
 // {
-// 	char*	str = "String length";
-// 	printf("string: %s, strlen: %lld, ft_strlen: %lld\n", str, strlen(str), ft_strlen(str));
+// 	char*	str = "Hello World";
+// 	printf("string: %s\nstrlen: %lld\nft_strlen: %lld\n", 
+// 			str, strlen(str), ft_strlen(str));
 // }

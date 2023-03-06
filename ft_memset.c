@@ -23,7 +23,7 @@ void	ft_memset(void *s, int ch, size_t n)
 // 	strcpy(s2, s1);
 // 	memset(&s1, '.', 5);
 // 	ft_memset(&s2, '.', 5);
-// 	printf("memset: %s, ft_memset: %s\n", s1, s2);
+// 	printf("memset: %s\nft_memset: %s\n", s1, s2);
 
 // 	return (0);
 // }
