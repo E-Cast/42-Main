@@ -1,6 +1,6 @@
-int	ft_isalpha(int	c)
+int	ft_isalpha(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);
 	else
 		return (0);
@@ -12,7 +12,8 @@ int	ft_isalpha(int	c)
 // {
 
 // 	for (int i = 0; i <= 127; i++)
-// 		printf("%c, %d, isalpha: %d, ft_isalpha: %d\n", i, i, ft_isalpha(i), ft_isalpha(i));
+// 		printf("%c, %d, isalpha: %d, ft_isalpha: %d\n", 
+// 				i, i, ft_isalpha(i), ft_isalpha(i));
 
 // 	return (0);
 // }
