@@ -24,12 +24,12 @@ void	ft_bzero(void *s, size_t n)
 // 	memset(s1, 0, 7);
 // 	ft_bzero(s2, 7);
 // 	printf("memset/bzero:");
-// 	for (i = 0; i < sizeof(s1); i++)
+// 	for (i = 0; i < (int)sizeof(s1); i++)
 // 	{
 // 		printf("%c", s1[i]);
 // 	}
 // 	printf("\nft_bzero:");
-// 	for (i = 0; i < sizeof(s2); i++)
+// 	for (i = 0; i < (int)sizeof(s2); i++)
 // 	{
 // 		printf("%c", s2[i]);
 // 	}
