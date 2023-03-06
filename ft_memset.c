@@ -1,8 +1,9 @@
 #include <stddef.h>
-void	ft_memset(void *s, int ch , size_t n)
+
+void	ft_memset(void *s, int ch, size_t n)
 {
-	unsigned	char *str;
-	size_t	i;
+	unsigned char	*str;
+	size_t			i;
 
 	str = s;
 	i = 0;
@@ -16,9 +17,10 @@ void	ft_memset(void *s, int ch , size_t n)
 // #include <stdio.h>
 // #include <string.h>
 // int	main(void) {
-// 	char s1[] = "Hello";
-// 	char s2[] = "Hello";
+// 	char	s1[] = "Hello World";
+// 	char	s2[sizeof(s1)];
 
+// 	strcpy(s2, s1);
 // 	memset(&s1, '.', 5);
 // 	ft_memset(&s2, '.', 5);
 // 	printf("memset: %s, ft_memset: %s\n", s1, s2);
