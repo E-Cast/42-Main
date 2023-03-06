@@ -1,4 +1,4 @@
-int	ft_isascii(int	c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
@@ -11,7 +11,8 @@ int	ft_isascii(int	c)
 // int	main(void)
 // {
 // 	for (int i = -10; i <= 140; i++)
-// 		printf("%c, %d, isascii: %d, ft_isascii: %d\n", i, i, isascii(i), ft_isascii(i));
+// 		printf("%c, %d, isascii: %d, ft_isascii: %d\n",
+// 				i, i, isascii(i), ft_isascii(i));
 
 // 	return (0);
 // }
