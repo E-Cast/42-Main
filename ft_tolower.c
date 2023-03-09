@@ -1,11 +1,11 @@
-char	ft_tolower(char	chr)
+char	ft_tolower(int c)
 {
-	if (chr >= 'A' && chr <= 'Z')
-		chr += 32;;
-	return (chr);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
 
-// #include <stdio.h>
+// #include <stdio.h>s
 // #include <ctype.h>
 // int	main(void)
 // {
@@ -14,11 +14,14 @@ char	ft_tolower(char	chr)
 
 // 	chr1 = 'g';
 // 	chr2 = chr1;
-// 	printf("Original:%c\ntolower:%c\nft_tolower:%c\n", chr1, tolower(chr1), ft_tolower(chr2));
+// 	printf("Original:%c\ntolower:%c\nft_tolower:%c\n", chr1, 
+// 		tolower(chr1), ft_tolower(chr2));
 // 	chr1 = 'A';
 // 	chr2 = chr1;
-// 	printf("Original:%c\ntolower:%c\nft_tolower:%c\n", chr1, tolower(chr1), ft_tolower(chr2));
+// 	printf("Original:%c\ntolower:%c\nft_tolower:%c\n", chr1, 
+// 		tolower(chr1), ft_tolower(chr2));
 // 	chr1 = '9';
 // 	chr2 = chr1;
-// 	printf("Original:%c\ntolower:%c\nft_tolower:%c", chr1, tolower(chr1), ft_tolower(chr2));
+// 	printf("Original:%c\ntolower:%c\nft_tolower:%c", chr1, 
+// 		tolower(chr1), ft_tolower(chr2));
 // }
