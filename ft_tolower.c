@@ -5,7 +5,7 @@ char	ft_tolower(int c)
 	return (c);
 }
 
-// #include <stdio.h>s
+// #include <stdio.h>
 // #include <ctype.h>
 // int	main(void)
 // {
