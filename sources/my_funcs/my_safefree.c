@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 11:30:31 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/04 13:51:01 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/04 15:24:32 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 void	*my_safefree(void *ptr)
 {
 	if (ptr)
+	{
 		free(ptr);
-	ptr = NULL;
-	return (ptr);
+		ptr = NULL;
+	}
+	return (NULL);
 }

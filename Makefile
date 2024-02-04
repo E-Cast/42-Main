@@ -54,10 +54,14 @@ MY_FUNCS_SRC	=	my_safefree.c \
 MY_FUNCS_DIR		:=	my_funcs/
 MY_FUNCS_SRC		:=	$(addprefix $(MY_FUNCS_DIR), $(MY_FUNCS_SRC))
 
+GNL_SRC			=	get_next_line.c
+GNL_DIR			:=	get_next_line/
+GNL_SRC			:=	$(addprefix $(GNL_DIR), $(GNL_SRC))
+
 SRC_DIR			:=	sources/
 OBJ_DIR			:=	objects/
 INC_DIR			:= 	includes
-SRC				:=	$(addprefix $(SRC_DIR), $(LIBFT_SRC) $(B_LIBFT_SRC) $(MY_FUNCS_SRC))
+SRC				:=	$(addprefix $(SRC_DIR), $(LIBFT_SRC) $(B_LIBFT_SRC) $(MY_FUNCS_SRC) $(GNL_SRC))
 OBJ				:=	$(subst $(SRC_DIR), $(OBJ_DIR), $(SRC:.c=.o))
 NAME			:=	libft.a
 INCLUDES		:=	-I $(INC_DIR)
@@ -65,7 +69,7 @@ INCLUDES		:=	-I $(INC_DIR)
 CC				:=	gcc
 C_FLAGS			:=	-Wall -Werror -Wextra
 AR				:=	ar rcs
-# DEBUG			:=	-g
+DEBUG			:=	-g 
 
 all: $(NAME)
 $(NAME): $(OBJ_DIR) $(OBJ)
@@ -74,10 +78,10 @@ $(NAME): $(OBJ_DIR) $(OBJ)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@$(CC) $(C_FLAGS) $(DEBUG) $(INCLUDES) -c $< -o $@
-	@echo "$(CC) $< $@"
+	@echo "$(CC) $(DEBUG)$< $@"
 
 $(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)$(LIBFT_DIR) $(OBJ_DIR)$(B_LIBFT_DIR) $(OBJ_DIR)$(MY_FUNCS_DIR)
+	mkdir -p $(OBJ_DIR)$(LIBFT_DIR) $(OBJ_DIR)$(B_LIBFT_DIR) $(OBJ_DIR)$(MY_FUNCS_DIR) $(OBJ_DIR)$(GNL_DIR)
 
 re: clean all
 

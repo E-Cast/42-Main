@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/04 14:49:48 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/04 15:46:33 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+# include <limits.h>
 
 /*Libft functions.*/
 
@@ -76,5 +78,18 @@ t_list	*ft_lstmap(t_list *node, void *(*fnc)(void *), void (*del)(void *));
 void	*my_safefree(void *ptr);
 int		my_strcmp(const char *str1, const char *str2);
 char	*my_strndup(const char *src, size_t len);
+
+/*Get_next_line.*/
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
+
+// This is only for portability as OPEN_MAX is no longer used on linux systems.
+# ifndef OPEN_MAX
+#  define OPEN_MAX 1024
+# endif
+
+char	*get_next_line(int fd);
 
 #endif
