@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   me_strcmp.c                                        :+:      :+:    :+:   */
+/*   my_strldup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/19 20:26:49 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/04 11:33:33 by ecastong         ###   ########.fr       */
+/*   Created: 2024/02/04 11:26:48 by ecastong          #+#    #+#             */
+/*   Updated: 2024/02/04 11:57:08 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	my_strcmp(const char *str1, const char *str2)
+char	*my_strldup(const char *src, size_t len)
 {
+	char	*dest;
 	size_t	i;
 
-	if (!str1 && !str2)
-		return (0);
-	if (!str1)
-		return (-1);
-	if (!str2)
-		return (1);
+	if (!src)
+		return (NULL);
+	if (ft_strlen(src) < len)
+		dest = (char *)malloc(ft_strlen(src) + 1);
+	else
+		dest = (char *)malloc(len + 1);
+	if (!dest)
+		return (NULL);
 	i = 0;
-	while (str1[i] || str2[i])
+	while (src[i] != '\0' && i < len)
 	{
-		if (str1[i] != str2[i])
-			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		dest[i] = src[i];
 		i++;
 	}
-	return (0);
+	dest[i] = '\0';
+	return (dest);
 }

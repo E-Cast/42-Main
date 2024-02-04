@@ -6,13 +6,18 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 23:00:42 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/26 22:09:15 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/04 11:49:41 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int cr);
+static int	ft_isspace(int cr)
+{
+	if ((cr >= 9 && cr <= 13) || cr == ' ')
+		return (cr);
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -37,11 +42,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (num);
-}
-
-static int	ft_isspace(int cr)
-{
-	if ((cr >= 9 && cr <= 13) || cr == ' ')
-		return (cr);
-	return (0);
 }

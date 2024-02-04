@@ -48,16 +48,16 @@ B_LIBFT_SRC		=	ft_lstadd_back.c \
 B_LIBFT_DIR		:=	libft_bonus/
 B_LIBFT_SRC		:=	$(addprefix $(B_LIBFT_DIR), $(B_LIBFT_SRC))
 
-MINE_SRC		=	my_safefree.c \
+MY_FUNCS_SRC	=	my_safefree.c \
 					my_strcmp.c \
 					my_strldup.c
-MINE_DIR		:=	mine/
-MINE_SRC		:=	$(addprefix $(MINE_DIR), $(MINE_SRC))
+MY_FUNCS_DIR		:=	my_funcs/
+MY_FUNCS_SRC		:=	$(addprefix $(MY_FUNCS_DIR), $(MY_FUNCS_SRC))
 
 SRC_DIR			:=	sources/
 OBJ_DIR			:=	objects/
 INC_DIR			:= 	includes
-SRC				:=	$(addprefix $(SRC_DIR), $(LIBFT_SRC) $(B_LIBFT_SRC) $(MINE_SRC))
+SRC				:=	$(addprefix $(SRC_DIR), $(LIBFT_SRC) $(B_LIBFT_SRC) $(MY_FUNCS_SRC))
 OBJ				:=	$(subst $(SRC_DIR), $(OBJ_DIR), $(SRC:.c=.o))
 NAME			:=	libft.a
 INCLUDES		:=	-I $(INC_DIR)
@@ -68,7 +68,6 @@ AR				:=	ar rcs
 # DEBUG			:=	-g
 
 all: $(NAME)
-
 $(NAME): $(OBJ_DIR) $(OBJ)
 	@$(AR) $(NAME) $(OBJ)
 	@echo "$(AR) $(NAME)"
@@ -78,7 +77,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@echo "$(CC) $< $@"
 
 $(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)libft $(OBJ_DIR)libft_bonus $(OBJ_DIR)mine
+	mkdir -p $(OBJ_DIR)$(LIBFT_DIR) $(OBJ_DIR)$(B_LIBFT_DIR) $(OBJ_DIR)$(MY_FUNCS_DIR)
 
 re: clean all
 
