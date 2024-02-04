@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/04 10:47:13 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/04 11:33:43 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,9 @@ void	ft_lstdelone(t_list *node, void (del)(void *));
 void	ft_lstclear(t_list **node, void (*del)(void *));
 void	ft_lstiter(t_list *first_node, void (*fnc)(void *));
 t_list	*ft_lstmap(t_list *node, void *(*fnc)(void *), void (*del)(void *));
+
+void	my_safefree(void *ptr);
+int		my_strcmp(const char *str1, const char *str2);
+char	*my_strldup(const char *src, size_t len);
 
 #endif
