@@ -1,8 +1,5 @@
-.DS_Store
-.vscode
-*.out
-*.swp
-*.gch
-*.a
-*.o
-*.dSYM
+.DS_Store/
+.vscode/
+
+libft.a
+objects/
