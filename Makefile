@@ -50,7 +50,7 @@ B_LIBFT_SRC		:=	$(addprefix $(B_LIBFT_DIR), $(B_LIBFT_SRC))
 
 MY_FUNCS_SRC	=	my_safefree.c \
 					my_strcmp.c \
-					my_strldup.c
+					my_strndup.c
 MY_FUNCS_DIR		:=	my_funcs/
 MY_FUNCS_SRC		:=	$(addprefix $(MY_FUNCS_DIR), $(MY_FUNCS_SRC))
 

@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/04 11:51:14 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/04 14:24:14 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_strdup(const char *src);
 char	*ft_substr(char const *str, unsigned int start, size_t len);
 char	*ft_strjoin(const char *str1, const char *str2);
 char	*ft_strtrim(const char *str, const char *set);
-// char	**ft_split(const char *str, char c);
+char	**ft_split(const char *str, char c);
 char	*ft_itoa(int num);
 char	*ft_strmapi(const char *str, char (*fnc)(unsigned int, char));
 void	ft_striteri(char *str, void (*fnc)(unsigned int, char*));
@@ -73,6 +73,6 @@ t_list	*ft_lstmap(t_list *node, void *(*fnc)(void *), void (*del)(void *));
 
 void	*my_safefree(void *ptr);
 int		my_strcmp(const char *str1, const char *str2);
-char	*my_strldup(const char *src, size_t len);
+char	*my_strndup(const char *src, size_t len);
 
 #endif

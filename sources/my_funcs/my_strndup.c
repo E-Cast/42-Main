@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_strldup.c                                       :+:      :+:    :+:   */
+/*   my_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 11:26:48 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/04 11:57:08 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/04 12:11:56 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*my_strldup(const char *src, size_t len)
+char	*my_strndup(const char *src, size_t len)
 {
 	char	*dest;
 	size_t	i;
