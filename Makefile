@@ -66,10 +66,9 @@ OBJ				:=	$(subst $(SRC_DIR), $(OBJ_DIR), $(SRC:.c=.o))
 NAME			:=	libft.a
 INCLUDES		:=	-I $(INC_DIR)
 
-CC				:=	gcc
-C_FLAGS			:=	-Wall -Werror -Wextra
+DEBUG			:=	-g 
+CC				:=	gcc -Wall -Werror -Wextra $(DEBUG)
 AR				:=	ar rcs
-# DEBUG			:=	-g 
 
 all: $(NAME)
 $(NAME): $(OBJ_DIR) $(OBJ)
@@ -77,8 +76,8 @@ $(NAME): $(OBJ_DIR) $(OBJ)
 	@echo "$(AR) $(NAME)"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	@$(CC) $(C_FLAGS) $(DEBUG) $(INCLUDES) -c $< -o $@
-	@echo "$(CC) $(DEBUG)$< $@"
+	@$(CC)$(INCLUDES) -c $< -o $@
+	@echo "$(CC)$< $@"
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)$(LIBFT_DIR) $(OBJ_DIR)$(B_LIBFT_DIR) $(OBJ_DIR)$(MY_FUNCS_DIR) $(OBJ_DIR)$(GNL_DIR)
