@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 07:38:00 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/04 15:41:03 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/04 20:08:04 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static int	read_fd(int fd, char *stash, char **line)
 
 char	*get_next_line(int fd)
 {
-	static char	stash[BUFFER_SIZE + 1];
+	static char	stash[OPEN_MAX][BUFFER_SIZE + 1];
 	char		*line;
 	int			errcode;
 
@@ -74,13 +74,13 @@ char	*get_next_line(int fd)
 	line = NULL;
 	while (!ft_strchr(line, '\n'))
 	{
-		errcode = read_fd(fd, stash, &line);
+		errcode = read_fd(fd, stash[fd], &line);
 		if (errcode == 0)
 			return (line);
 		if (errcode == -1)
 			return (NULL);
 	}
-	str_utils(NULL, &line[ft_strchr(line, '\n') - line + 1], stash);
+	str_utils(NULL, &line[ft_strchr(line, '\n') - line + 1], stash[fd]);
 	line[ft_strchr(line, '\n') - line + 1] = '\0';
 	return (str_utils(line, NULL, NULL));
 }
