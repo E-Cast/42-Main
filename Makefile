@@ -69,7 +69,7 @@ INCLUDES		:=	-I $(INC_DIR)
 CC				:=	gcc
 C_FLAGS			:=	-Wall -Werror -Wextra
 AR				:=	ar rcs
-DEBUG			:=	-g 
+# DEBUG			:=	-g 
 
 all: $(NAME)
 $(NAME): $(OBJ_DIR) $(OBJ)
