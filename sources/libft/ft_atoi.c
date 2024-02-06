@@ -6,19 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 23:00:42 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/04 11:49:41 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/06 15:03:34 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int cr)
-{
-	if ((cr >= 9 && cr <= 13) || cr == ' ')
-		return (cr);
-	return (0);
-}
-
+/*Converts the initial portion of the string into an integer and returns it.*/
 int	ft_atoi(const char *str)
 {
 	size_t	i;
@@ -30,7 +24,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	num = 0;
-	while (ft_isspace(str[i]))
+	while (my_isspace(str[i]))
 		i++;
 	if (str[i] == '-')
 		sign = -1;

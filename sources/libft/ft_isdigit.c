@@ -6,12 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 11:03:05 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/21 02:44:35 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/06 15:09:23 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Tests chr to see if it is a digit character.*/
 int	ft_isdigit(int chr)
 {
 	if (chr >= '0' && chr <= '9')

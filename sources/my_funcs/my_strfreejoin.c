@@ -6,14 +6,14 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 15:15:05 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/06 15:25:00 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/06 15:29:25 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*Allocates and returns a new string, which is the result of the concatenation
-	of str1 and str2. On a successfull return frees str1 and str2*/
+	of str1 and str2. Frees str1 and str2*/
 char	*my_strfreejoin(const char *str1, const char *str2)
 {
 	char	*dest;
@@ -25,19 +25,20 @@ char	*my_strfreejoin(const char *str1, const char *str2)
 		return (NULL);
 	dest_len = ft_strlen(str1) + ft_strlen(str2) + 1;
 	dest = (char *)ft_calloc(dest_len, sizeof(char));
-	if (!dest)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (str1[i])
+	if (dest)
 	{
-		dest[i] = str1[i];
-		i++;
+		i = 0;
+		j = 0;
+		while (str1[i])
+		{
+			dest[i] = str1[i];
+			i++;
+		}
+		while (str2[j])
+			dest[i++] = str2[j++];
+		dest[i] = '\0';
 	}
-	while (str2[j])
-		dest[i++] = str2[j++];
-	dest[i] = '\0';
-	free(str1);
-	free(str2);
+	my_safefree(str1);
+	my_safefree(str2);
 	return (dest);
 }

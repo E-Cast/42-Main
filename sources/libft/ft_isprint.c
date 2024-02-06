@@ -6,12 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:34:18 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/23 13:32:21 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/06 15:09:48 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Tests chr to see if it is a printable character.*/
 int	ft_isprint(int chr)
 {
 	if (chr >= 32 && chr <= 126)

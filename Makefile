@@ -48,7 +48,8 @@ B_LIBFT_SRC		=	ft_lstadd_back.c \
 B_LIBFT_DIR		:=	libft_bonus/
 B_LIBFT_SRC		:=	$(addprefix $(B_LIBFT_DIR), $(B_LIBFT_SRC))
 
-MY_FUNCS_SRC	=	my_safefree.c \
+MY_FUNCS_SRC	=	my_isspace.c \
+					my_safefree.c \
 					my_strcmp.c \
 					my_strndup.c
 MY_FUNCS_DIR		:=	my_funcs/

@@ -6,13 +6,16 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 20:26:49 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/25 00:11:55 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/06 14:09:46 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, size_t nbr)
+/*Compares the ascii values of the first n characters from str1 and str2. 
+	Returns an integer greater than, equal to, or less than 0 depending on 
+	if str1 is greater than, equal to, or less than str2*/
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
 	size_t	i;
 
@@ -23,7 +26,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t nbr)
 	if (!str2)
 		return (1);
 	i = 0;
-	while ((str1[i] || str2[i]) && i < nbr)
+	while ((str1[i] || str2[i]) && i < n)
 	{
 		if (str1[i] != str2[i])
 			return ((unsigned char)str1[i] - (unsigned char)str2[i]);

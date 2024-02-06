@@ -6,12 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:35:13 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/25 00:29:59 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/06 14:58:44 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Writes zero to every bite in the string.*/
 void	ft_bzero(void *str, size_t len)
 {
 	char	*ptr;

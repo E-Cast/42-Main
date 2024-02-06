@@ -6,12 +6,14 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 19:12:47 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/26 19:30:31 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/06 15:23:53 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Allocates and returns a new string, which is the 
+	result of the concatenation of str1 and str2.*/
 char	*ft_strjoin(const char *str1, const char *str2)
 {
 	char	*dest;

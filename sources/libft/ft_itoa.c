@@ -6,12 +6,11 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 22:08:35 by ecastong          #+#    #+#             */
-/*   Updated: 2023/05/02 01:20:30 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/06 15:54:52 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_intlen(int num);
 static char	*ft_itoaneg(int num, char *str, int len);
