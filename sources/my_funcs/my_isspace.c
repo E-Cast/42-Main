@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_safefree.c                                      :+:      :+:    :+:   */
+/*   my_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/04 11:30:31 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/06 14:01:21 by ecastong         ###   ########.fr       */
+/*   Created: 2024/02/06 14:11:57 by ecastong          #+#    #+#             */
+/*   Updated: 2024/02/06 15:15:23 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Ensures the received pointer is valid and then frees it, returns NULL.*/
-void	*my_safefree(void *ptr)
+int	my_isspace(int cr)
 {
-	if (ptr)
-	{
-		free(ptr);
-		ptr = NULL;
-	}
-	return (NULL);
+	if ((cr >= 9 && cr <= 13) || cr == ' ')
+		return (cr);
+	return (0);
 }

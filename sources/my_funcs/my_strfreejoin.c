@@ -1,38 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_strndup.c                                       :+:      :+:    :+:   */
+/*   my_strfreejoin.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/04 11:26:48 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/06 14:09:14 by ecastong         ###   ########.fr       */
+/*   Created: 2024/02/06 15:15:05 by ecastong          #+#    #+#             */
+/*   Updated: 2024/02/06 15:25:00 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Allocates sufficient memory for a copy of n characters
-	from str1 and returns the null terminated copy.*/
-char	*my_strndup(const char *src, size_t n)
+/*Allocates and returns a new string, which is the result of the concatenation
+	of str1 and str2. On a successfull return frees str1 and str2*/
+char	*my_strfreejoin(const char *str1, const char *str2)
 {
 	char	*dest;
 	size_t	i;
+	size_t	j;
+	size_t	dest_len;
 
-	if (!src)
+	if (!str1 || !str2)
 		return (NULL);
-	if (ft_strlen(src) < n)
-		dest = (char *)malloc(ft_strlen(src) + 1);
-	else
-		dest = (char *)malloc(n + 1);
+	dest_len = ft_strlen(str1) + ft_strlen(str2) + 1;
+	dest = (char *)ft_calloc(dest_len, sizeof(char));
 	if (!dest)
 		return (NULL);
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	j = 0;
+	while (str1[i])
 	{
-		dest[i] = src[i];
+		dest[i] = str1[i];
 		i++;
 	}
+	while (str2[j])
+		dest[i++] = str2[j++];
 	dest[i] = '\0';
+	free(str1);
+	free(str2);
 	return (dest);
 }

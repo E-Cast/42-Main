@@ -6,12 +6,15 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 20:26:49 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/04 11:50:33 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/06 14:04:45 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Compares the ascii values of str1 and str2. Returns an
+	integer greater than, equal to, or less than 0 depending on 
+	if str1 is greater than, equal to, or less than str2*/
 int	my_strcmp(const char *str1, const char *str2)
 {
 	size_t	i;
