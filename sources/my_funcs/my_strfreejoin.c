@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 15:15:05 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/06 15:29:25 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/08 13:22:34 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*Allocates and returns a new string, which is the result of the concatenation
 	of str1 and str2. Frees str1 and str2*/
-char	*my_strfreejoin(const char *str1, const char *str2)
+char	*my_strfreejoin(char *str1, char *str2)
 {
 	char	*dest;
 	size_t	i;
