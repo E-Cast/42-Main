@@ -6,76 +6,35 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 22:08:35 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/06 15:54:52 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/08 13:38:37 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_intlen(int num);
-static char	*ft_itoaneg(int num, char *str, int len);
-
+/*Allocates and returns the integer received as argument as a string*/
 char	*ft_itoa(int num)
 {
-	int		len;
+	int		str_len;
 	char	*str;
 
-	len = ft_intlen(num);
-	str = ft_calloc(len + 1, sizeof(char));
-	if (!str)
-		return (NULL);
-	str[len] = '\0';
-	if (num >= 0)
-	{
-		while (len > 0)
-		{
-			str[len - 1] = (num % 10) + '0';
-			num /= 10;
-			len--;
-		}
-		return (str);
-	}
-	else
-		return (ft_itoaneg(num, str, len));
-}
-
-static int	ft_intlen(int num)
-{
-	int	len;
-
-	if (num == 0)
-		return (1);
-	if (num == -2147483648)
-		return (11);
-	len = 0;
+	str_len = my_intlen(num, 10);
 	if (num < 0)
+		str_len++;
+	str = ft_calloc(str_len + 1, sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	if (num == 0)
+		str[0] = '0';
+	if (num < 0)
+		str[0] = '-';
+	while (num != 0)
 	{
-		num *= -1;
-		len += 1;
-	}
-	while (num > 0)
-	{
+		str[str_len - 1] = num % 10 + '0';
+		if (num < 0)
+			str[str_len - 1] = (num % 10 * -1) + '0';
 		num /= 10;
-		len++;
+		str_len--;
 	}
-	return (len);
-}
-
-static char	*ft_itoaneg(int num, char *str, int len)
-{
-	if (num == -2147483648)
-	{
-		str[len - 1] = '8';
-		num /= 10;
-		len--;
-	}
-	num *= -1;
-	while (num > 0)
-	{
-		str[len - 1] = (num % 10) + '0';
-		num /= 10;
-		len--;
-	}
-	str[0] = '-';
 	return (str);
 }

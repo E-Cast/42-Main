@@ -3,5 +3,5 @@
 
 int	main(void)
 {
-	printf("%s", (char *)ft_calloc(10, sizeof(char)));
+	printf("%s", ft_itoa(120312));
 }
