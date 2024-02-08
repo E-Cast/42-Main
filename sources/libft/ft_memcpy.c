@@ -6,12 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:49:14 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/24 23:48:22 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/08 13:42:23 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Copies len bytes from src to dest.*/
 void	*ft_memcpy(void *dest, const void *src, size_t len)
 {
 	unsigned char	*dest_ptr;

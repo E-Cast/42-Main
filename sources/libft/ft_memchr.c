@@ -6,12 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 16:46:45 by ecastong          #+#    #+#             */
-/*   Updated: 2023/05/01 17:45:10 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/08 13:39:43 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*locates the first occurrence of byte in src*/
 void	*ft_memchr(const void *src, int byte, size_t len)
 {
 	unsigned char	*str;

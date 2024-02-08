@@ -6,12 +6,15 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 17:02:26 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/25 00:11:58 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/08 13:41:34 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Compares the first len bytes of src1 and src2. Returns an 
+	integer greater than, equal to, or less than 0 depending 
+	on if src1 is greater than, equal to, or less than src2*/
 int	ft_memcmp(const void *src1, const void *src2, size_t len)
 {
 	unsigned char	*str1;
