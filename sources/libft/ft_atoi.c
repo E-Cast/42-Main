@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 23:00:42 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/06 15:03:34 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/10 19:08:55 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int	ft_atoi(const char *str)
 	int		sign;
 	int		num;
 
-	if (!str)
-		return (0);
 	i = 0;
 	sign = 1;
 	num = 0;

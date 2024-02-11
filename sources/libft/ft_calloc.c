@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 00:36:10 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/06 15:03:54 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/10 19:05:40 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*ptr;
-	size_t			i;
 
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	i = 0;
 	ft_bzero(ptr, count * size);
 	return ((void *)ptr);
 }
