@@ -6,12 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 18:50:17 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/26 21:12:01 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:52:25 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Allocates and returns a substring from str.*/
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
 	char	*sub_str;
