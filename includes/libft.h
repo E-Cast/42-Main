@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/08 13:22:40 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:08:33 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 // This is only for portability as OPEN_MAX is no longer used on linux systems.
 # ifndef OPEN_MAX
-#  define OPEN_MAX 1024
+#  define OPEN_MAX 10240
 # endif
 
 char	*get_next_line(int fd);
@@ -94,5 +94,6 @@ void	*my_safefree(void *ptr);
 int		my_strcmp(const char *str1, const char *str2);
 char	*my_strfreejoin(char *str1, char *str2);
 char	*my_strndup(const char *src, size_t len);
+void	my_strrealloc(char **str);
 
 #endif

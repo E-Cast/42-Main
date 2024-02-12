@@ -53,7 +53,8 @@ MY_FUNCS_SRC	=	my_intlen.c \
 					my_safefree.c \
 					my_strcmp.c \
 					my_strfreejoin.c \
-					my_strndup.c
+					my_strndup.c \
+					my_strrealloc.c
 MY_FUNCS_DIR		:=	my_funcs/
 MY_FUNCS_SRC		:=	$(addprefix $(MY_FUNCS_DIR), $(MY_FUNCS_SRC))
 

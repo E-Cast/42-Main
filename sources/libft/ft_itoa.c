@@ -6,13 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 22:08:35 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/08 13:38:37 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 16:18:59 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Allocates and returns the integer received as argument as a string*/
+/*Allocates and returns the integer received as argument as a string.*/
 char	*ft_itoa(int num)
 {
 	int		str_len;

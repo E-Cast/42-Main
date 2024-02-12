@@ -6,12 +6,14 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 21:39:10 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/25 00:38:01 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 16:29:25 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Appends up to (dest_size - ft_strlen(dest) - 1) characters from
+	src to the end of dest and null terminates the string.*/
 size_t	ft_strlcat(char	*dest, const char *src, size_t dest_size)
 {
 	size_t	dest_len;
