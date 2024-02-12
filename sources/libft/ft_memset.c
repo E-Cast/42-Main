@@ -6,12 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:57:44 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/24 23:49:07 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 14:36:13 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Writes len bytes of value c to str.*/
 void	*ft_memset(void *str, int c, size_t len)
 {
 	unsigned char	*ptr;
