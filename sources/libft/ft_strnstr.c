@@ -6,12 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 17:48:32 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/25 01:44:42 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:20:02 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Returns the first instance of the substring needle in the string haystack.*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

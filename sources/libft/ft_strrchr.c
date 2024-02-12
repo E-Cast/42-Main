@@ -6,28 +6,27 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 17:56:06 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/25 01:29:03 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:22:51 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *src, int src_c)
+/*Returns the last occurrence of the character chr in src.*/
+char	*ft_strrchr(const char *src, int chr)
 {
 	char	*str;
-	char	chr;
 	char	*res;
 	size_t	i;
 
 	if (!src)
 		return (NULL);
 	str = (char *)src;
-	chr = (char)src_c;
 	res = NULL;
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] == (char)chr)
+		if (str[i] == chr)
 			res = &str[i];
 		i++;
 	}

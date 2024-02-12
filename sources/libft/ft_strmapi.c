@@ -6,12 +6,14 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 01:25:58 by ecastong          #+#    #+#             */
-/*   Updated: 2023/05/02 01:44:56 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:18:35 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Applies the function fnc on each character of
+	str to create a new string with malloc.*/
 char	*ft_strmapi(const char *str, char (*fnc)(unsigned int, char))
 {
 	char	*results;

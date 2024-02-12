@@ -6,12 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:38:47 by ecastong          #+#    #+#             */
-/*   Updated: 2023/04/25 00:38:03 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:15:41 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Finds and returns the length of the string.*/
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;

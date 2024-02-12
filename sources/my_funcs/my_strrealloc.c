@@ -6,13 +6,13 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:30:44 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/12 17:08:19 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:10:06 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
+/*Reallocates the string so as to remove unused bytes after a null terminator.*/
 void	my_strrealloc(char **str)
 {
 	char	*tmp;
