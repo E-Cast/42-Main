@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/12 17:08:33 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:43:51 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ t_list	*ft_lstmap(t_list *node, void *(*fnc)(void *), void (*del)(void *));
 /*My functions.*/
 
 int		my_intlen(int num, int base);
+int		my_isset(char chr, const char *set);
 int		my_isspace(int cr);
 void	*my_safefree(void *ptr);
 int		my_strcmp(const char *str1, const char *str2);
