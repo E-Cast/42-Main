@@ -3,23 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 00:12:20 by ecastong          #+#    #+#             */
-/*   Updated: 2023/05/03 02:25:40 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/14 14:38:33 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Allocates and returns a new node initialized with the value content.*/
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*element;
+	t_list	*node;
 
-	element = malloc(sizeof(t_list));
-	if (!element)
+	node = malloc(sizeof(t_list));
+	if (!node)
 		return (NULL);
-	element -> content = content;
-	element -> next = NULL;
-	return (element);
+	node -> content = content;
+	node -> next = NULL;
+	return (node);
 }

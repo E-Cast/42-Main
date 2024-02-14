@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 01:01:00 by ecastong          #+#    #+#             */
-/*   Updated: 2023/05/03 02:24:35 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/14 14:39:28 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *first_node)
+/*Returns the last node of the list.*/
+t_list	*ft_lstlast(t_list *list)
 {
 	t_list	*current_node;
 
-	if (!first_node)
+	if (!list)
 		return (0);
-	current_node = first_node;
+	current_node = list;
 	while (current_node -> next)
 		current_node = current_node -> next;
 	return (current_node);

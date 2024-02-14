@@ -3,27 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 01:37:29 by ecastong          #+#    #+#             */
-/*   Updated: 2023/05/03 02:07:58 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/14 14:42:48 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **node, void (*del)(void *))
+/*Clears the entire list by using ft_lstdelone on every node.*/
+void	ft_lstclear(t_list **list, void (*del)(void *))
 {
 	t_list	*next_node;
 
-	if (!*node || !del)
+	if (!*list || !del)
 		return ;
-	while (*node)
+	while (*list)
 	{
-		next_node = (*node)-> next;
-		ft_lstdelone(*node, del);
-		*node = next_node;
+		next_node = (*list)-> next;
+		ft_lstdelone(*list, del);
+		*list = next_node;
 	}
-	free(*node);
-	*node = NULL;
+	free(*list);
+	*list = NULL;
 }

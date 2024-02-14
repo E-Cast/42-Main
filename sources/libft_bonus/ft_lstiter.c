@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 01:46:40 by ecastong          #+#    #+#             */
-/*   Updated: 2023/05/03 01:55:41 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/02/14 14:47:14 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *node, void (*fnc)(void *))
+/*Calls the function fnc on the content of every node in the list.*/
+void	ft_lstiter(t_list *list, void (*fnc)(void *))
 {
-	if (!node || !fnc)
+	if (!list || !fnc)
 		return ;
-	while (node)
+	while (list)
 	{
-		fnc(node -> content);
-		node = node -> next;
+		fnc(list -> content);
+		list = list -> next;
 	}
 }
