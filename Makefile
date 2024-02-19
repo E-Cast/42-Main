@@ -48,7 +48,8 @@ B_LIBFT_SRC		=	ft_lstadd_back.c \
 B_LIBFT_DIR		:=	libft_bonus/
 B_LIBFT_SRC		:=	$(addprefix $(B_LIBFT_DIR), $(B_LIBFT_SRC))
 
-MY_FUNCS_SRC	=	my_intlen.c \
+MY_FUNCS_SRC	=	my_arrfree.c \
+					my_intlen.c \
 					my_isset.c \
 					my_isspace.c \
 					my_safefree.c \
