@@ -6,7 +6,7 @@
 /*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 01:37:29 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/14 14:42:48 by ecast            ###   ########.fr       */
+/*   Updated: 2024/02/24 21:31:02 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstclear(t_list **list, void (*del)(void *))
 		return ;
 	while (*list)
 	{
-		next_node = (*list)-> next;
+		next_node = (*list)->next;
 		ft_lstdelone(*list, del);
 		*list = next_node;
 	}

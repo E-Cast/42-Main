@@ -6,7 +6,7 @@
 /*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 00:49:02 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/14 14:38:59 by ecast            ###   ########.fr       */
+/*   Updated: 2024/02/24 21:30:49 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_lstsize(t_list *list)
 	current_node = list;
 	while (current_node)
 	{
-		current_node = current_node -> next;
+		current_node = current_node->next;
 		i++;
 	}
 	return (i);

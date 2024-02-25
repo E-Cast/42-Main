@@ -6,7 +6,7 @@
 /*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 01:12:40 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/14 14:39:58 by ecast            ###   ########.fr       */
+/*   Updated: 2024/02/24 21:30:49 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void	ft_lstadd_back(t_list **list, t_list *new_node)
 	else
 	{
 		current_node = ft_lstlast(*list);
-		current_node -> next = new_node;
+		current_node->next = new_node;
 	}
 }

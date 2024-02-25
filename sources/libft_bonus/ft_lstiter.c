@@ -6,7 +6,7 @@
 /*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 01:46:40 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/14 14:47:14 by ecast            ###   ########.fr       */
+/*   Updated: 2024/02/24 21:30:49 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstiter(t_list *list, void (*fnc)(void *))
 		return ;
 	while (list)
 	{
-		fnc(list -> content);
-		list = list -> next;
+		fnc(list->content);
+		list = list->next;
 	}
 }

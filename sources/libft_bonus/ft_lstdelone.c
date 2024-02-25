@@ -6,7 +6,7 @@
 /*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 01:31:57 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/14 14:41:34 by ecast            ###   ########.fr       */
+/*   Updated: 2024/02/24 21:30:49 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	ft_lstdelone(t_list *node, void (del)(void *))
 {
 	if (!node || !del)
 		return ;
-	del(node -> content);
+	del(node->content);
 	free(node);
 }
