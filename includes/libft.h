@@ -6,7 +6,7 @@
 /*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/19 03:04:36 by ecast            ###   ########.fr       */
+/*   Updated: 2024/03/13 14:13:49 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ void	*my_freearr(void **array, size_t size);
 int		my_intlen(int num, int base);
 int		my_isset(char chr, const char *set);
 int		my_isspace(int cr);
+char	*my_jointhree(const char *str1, const char *str2, const char *str3);
 void	*my_safefree(void *ptr);
 int		my_strcmp(const char *str1, const char *str2);
 char	*my_strfreejoin(char *str1, char *str2);
