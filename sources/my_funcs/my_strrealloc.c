@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   my_strrealloc.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:30:44 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/12 17:10:06 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/03/12 21:09:42 by ecast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	my_strrealloc(char **str)
 	if (*str[0] == '\0')
 	{
 		*str = my_safefree(*str);
+		*str = ft_strdup("");
 		return ;
 	}
 	tmp = ft_strdup(*str);
