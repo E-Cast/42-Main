@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 21:28:52 by ecastong          #+#    #+#             */
-/*   Updated: 2024/02/04 14:25:59 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/03/14 16:40:59 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,13 @@ char	**ft_split(char const *str, char delim)
 	array = alloc_array(str, delim);
 	if (array == NULL)
 		return (NULL);
+	if (str[0] == '\0')
+	{
+		array[0] = ft_strdup("");
+		if (array[0] == NULL)
+			array = my_safefree(array);
+		return (array);
+	}
 	array = fill_array(array, str, delim);
 	return (array);
 }
