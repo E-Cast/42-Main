@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecast <ecast@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/03/13 14:13:49 by ecast            ###   ########.fr       */
+/*   Updated: 2024/04/09 22:36:49 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_strchr(const char *str, int chr);
 char	*ft_strdup(const char *src);
 void	ft_striteri(char *str, void (*fnc)(unsigned int, char*));
 char	*ft_strjoin(const char *str1, const char *str2);
-size_t	ft_strlcat(char	*dest, const char *src, size_t dest_size);
+size_t	ft_strlcat(char *dest, const char *src, size_t dest_size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size);
 size_t	ft_strlen(const char *str);
 char	*ft_strmapi(const char *str, char (*fnc)(unsigned int, char));
@@ -88,7 +88,8 @@ size_t	ft_lstsize(t_list *list);
 
 /*My functions.*/
 
-void	*my_freearr(void **array, size_t size);
+void	*my_arrfree(void **array, size_t size);
+size_t	my_atoh(const char *str);
 int		my_intlen(int num, int base);
 int		my_isset(char chr, const char *set);
 int		my_isspace(int cr);
