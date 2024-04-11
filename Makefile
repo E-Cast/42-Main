@@ -54,6 +54,7 @@ MY_FUNCS_SRC	=	my_arrfree.c \
 					my_isset.c \
 					my_isspace.c \
 					my_jointhree.c \
+					my_lstdellast.c \
 					my_safefree.c \
 					my_strcmp.c \
 					my_strfreejoin.c \

@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/04/09 22:36:49 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/04/11 02:06:20 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ int		my_intlen(int num, int base);
 int		my_isset(char chr, const char *set);
 int		my_isspace(int cr);
 char	*my_jointhree(const char *str1, const char *str2, const char *str3);
+void	my_lstdellast(t_list **list, void (del)(void *));
 void	*my_safefree(void *ptr);
 int		my_strcmp(const char *str1, const char *str2);
 char	*my_strfreejoin(char *str1, char *str2);

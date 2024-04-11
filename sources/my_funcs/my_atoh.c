@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 22:31:05 by ecastong          #+#    #+#             */
-/*   Updated: 2024/04/09 22:37:15 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/04/11 02:06:52 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ size_t	my_atoh(const char *str)
 
 	i = 0;
 	num = 0;
-
 	while (my_isspace(str[i]))
 		i++;
 	if (str[i] && str[i] == '0' && (str[i + 1] == 'x' || str[i + 1] == 'X'))
