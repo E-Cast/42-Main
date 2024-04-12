@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/04/11 02:06:20 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/04/12 19:39:16 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,8 @@ size_t	ft_lstsize(t_list *list);
 
 /*My functions.*/
 
-void	*my_arrfree(void **array, size_t size);
 size_t	my_atoh(const char *str);
+void	*my_freearr(void **array, size_t size);
 int		my_intlen(int num, int base);
 int		my_isset(char chr, const char *set);
 int		my_isspace(int cr);
