@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 22:31:05 by ecastong          #+#    #+#             */
-/*   Updated: 2024/04/15 07:29:52 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/04/15 07:46:19 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	my_atoh(const char *str)
 		i += 2;
 	while (str[i] && (my_isset(str[i], "0123456789abcdefABCDEF")))
 	{
-		num = num * 16 + hexchar_to_int(str[i]);
+		num = num * 16 + my_hexchar_to_int(str[i]);
 		i++;
 	}
 	return (num);
