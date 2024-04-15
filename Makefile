@@ -50,6 +50,7 @@ B_LIBFT_SRC		:=	$(addprefix $(B_LIBFT_DIR), $(B_LIBFT_SRC))
 
 MY_FUNCS_SRC	=	my_atoh.c \
 					my_freearr.c \
+					my_hexcar_to_int.c \
 					my_intlen.c \
 					my_isset.c \
 					my_isspace.c \
