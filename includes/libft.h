@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/04/15 07:30:19 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/04/15 07:44:01 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ size_t	ft_lstsize(t_list *list);
 
 size_t	my_atoh(const char *str);
 void	*my_freearr(void **array, size_t size);
-int		hexchar_to_int(char hex);
+int		my_hexchar_to_int(char hex);
 int		my_intlen(int num, int base);
 int		my_isset(char chr, const char *set);
 int		my_isspace(int cr);
