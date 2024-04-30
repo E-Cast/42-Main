@@ -48,7 +48,9 @@ B_LIBFT_SRC		=	ft_lstadd_back.c \
 B_LIBFT_DIR		:=	libft_bonus/
 B_LIBFT_SRC		:=	$(addprefix $(B_LIBFT_DIR), $(B_LIBFT_SRC))
 
-MY_FUNCS_SRC	=	my_atoh.c \
+MY_FUNCS_SRC	=	my_atof.c \
+					my_atoh.c \
+					my_atoll.c \
 					my_freearr.c \
 					my_hexcar_to_int.c \
 					my_intlen.c \

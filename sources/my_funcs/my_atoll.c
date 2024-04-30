@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_atoh.c                                          :+:      :+:    :+:   */
+/*   my_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 22:31:05 by ecastong          #+#    #+#             */
-/*   Updated: 2024/04/30 13:44:32 by ecastong         ###   ########.fr       */
+/*   Created: 2024/04/30 12:42:36 by ecastong          #+#    #+#             */
+/*   Updated: 2024/04/30 13:41:50 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	my_atoh(const char *str)
+/*Converts the initial portion of the string into a 
+	long long integer and returns it.*/
+long long	my_atoll(const char *str)
 {
-	size_t	i;
-	size_t	num;
+	size_t		i;
+	int			sign;
+	long long	num;
 
 	i = 0;
+	sign = 1;
 	num = 0;
 	if (str && str[0])
 	{
 		while (my_isspace(str[i]))
 			i++;
-		if (str[i] && str[i] == '0' && (str[i + 1] == 'x' || str[i + 1] == 'X'))
-			i += 2;
-		while (str[i] && (my_isset(str[i], "0123456789abcdefABCDEF")))
+		if (str[i] == '-')
+			sign = -1;
+		if (str[i] == '+' || str[i] == '-')
+			i++;
+		while (str[i] && (ft_isdigit(str[i])))
 		{
-			num = num * 16 + my_hexchar_to_int(str[i]);
+			num = num * 10 + (str[i] - 48) * sign;
 			i++;
 		}
 	}
