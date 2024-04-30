@@ -6,7 +6,7 @@
 /*   By: ecastong <ecastong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:58:45 by ecastong          #+#    #+#             */
-/*   Updated: 2024/04/30 13:43:34 by ecastong         ###   ########.fr       */
+/*   Updated: 2024/04/30 18:46:13 by ecastong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ size_t		ft_lstsize(t_list *list);
 
 /*My functions.*/
 
-double		my_atof(char *str);
+double		my_atof(const char *str);
 size_t		my_atoh(const char *str);
 long long	my_atoll(const char *str);
 void		*my_freearr(void **array, size_t size);
